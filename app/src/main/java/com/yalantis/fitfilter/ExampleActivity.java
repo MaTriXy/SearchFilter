@@ -1,5 +1,6 @@
 package com.yalantis.fitfilter;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -51,6 +52,7 @@ public class ExampleActivity extends AppCompatActivity implements FilterListener
         //the text to show when there's no selected items
         mFilter.setNoSelectedItemText(getString(R.string.str_all_selected));
         mFilter.build();
+
 
         mRecyclerView = (RecyclerView) findViewById(R.id.list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
@@ -183,6 +185,7 @@ public class ExampleActivity extends AppCompatActivity implements FilterListener
 
             filterItem.setStrokeColor(mColors[0]);
             filterItem.setTextColor(mColors[0]);
+            filterItem.setCornerRadius(14);
             filterItem.setCheckedTextColor(ContextCompat.getColor(ExampleActivity.this, android.R.color.white));
             filterItem.setColor(ContextCompat.getColor(ExampleActivity.this, android.R.color.white));
             filterItem.setCheckedColor(mColors[position]);
